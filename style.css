@@ -1,0 +1,63 @@
+:root {
+  --yellow: #fff4aa;
+  --cyan: #31b6af;
+  --cyanlight: rgb(189, 245, 242);
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0;
+  padding: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 2px solid #0c5c58;
+}
+.task {
+  max-height: 300px;
+  width: 100%;
+  background-color: var(--cyan);
+  border-radius: 5px;
+}
+.task-input {
+  width: 65%;
+  margin: 20px 30px;
+  padding: 10px;
+  border-width: 0;
+  border-radius: 2.5px;
+  background-color: var(--cyanlight);
+}
+.task-input input {
+  font-size: 24px;
+  color: #0c5c58;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.task input:active,
+.task input:focus {
+  outline: none;
+}
+button {
+  width: 15%;
+  margin: 10px 20px;
+  padding: 10px;
+  border-radius: 2.5px;
+  background-color: var(--cyanlight);
+  position: relative;
+  font-size: 16px;
+  color: #0c5c58;
+  text-decoration: none;
+  border: none;
+  border-bottom: 3px solid var(--cyanlight);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+button:hover,
+button:active {
+  -webkit-transform: translate(0px, 5px);
+  -ms-transform: translate(0px, 5px);
+  transform: translate(0px, 5px);
+  border-bottom: 3px solid #0c5c58;
+}
