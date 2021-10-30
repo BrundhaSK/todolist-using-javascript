@@ -25,9 +25,10 @@ function add() {
     };
   }
 
-  list.addEventListener("click", (e) => {
-    if (e.target.tagName) {
-      e.target.classList.toggle("checked");
-    }
-  });
+  var updated_task = document.querySelectorAll("LI");
+  for (var i = 0; i < updated_task.length; i++) {
+    updated_task[i].onclick = function () {
+      this.classList.toggle("checked");
+    };
+  }
 }
