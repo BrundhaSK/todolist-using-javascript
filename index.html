@@ -12,13 +12,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
-    <link rel="shortcut icon" href="fav.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="fav.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="todo">
       <div class="container">
+        <div class="heading"><h1>Todo List</h1></div>
         <div class="task">
           <input
             type="text"
@@ -29,11 +30,11 @@
           <button id="add" onclick="add()">Add Task</button>
         </div>
         <div id="updated-task">
-          <ul class="listed-task">
-            <li>Do homework<i class="fas fa-trash"></i></li>
-            <li>Learn Javasript<i class="fas fa-trash"></i></li>
-            <li>Do Coding<i class="fas fa-trash"></i></li>
-          </ul>
+          <ul id="listed-task"></ul>
+          <div class="card-footer" style="text-align: center">
+            Add activities need to perform and cross once you finish it. Also
+            you can delete the unneccessary task.
+          </div>
         </div>
       </div>
     </div>

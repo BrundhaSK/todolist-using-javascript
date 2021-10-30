@@ -1,7 +1,33 @@
 function add() {
-  var task = document.getElementById("task-input").value;
+  let task = document.getElementById("task-input");
+  let task_value = task.value;
+  let list = document.getElementById("listed-task");
+  let element = document.getElementsByTagName("li");
 
-  if (task === "" || task === null) {
+  if (task_value === "" || task_value === null) {
     alert("Enter a task to add, don't leave it blank");
+  } else {
+    let li = document.createElement("li");
+    li.innerHTML =
+      task_value +
+      `
+    <button class="delete">
+      <i class="fas fa-trash"></i>
+    </button>`;
+    list.insertBefore(li, list.childNodes[0]);
+    task.value = "";
   }
+
+  var current_task = document.querySelectorAll(".delete");
+  for (var i = 0; i < current_task.length; i++) {
+    current_task[i].onclick = function () {
+      this.parentNode.remove();
+    };
+  }
+
+  list.addEventListener("click", (e) => {
+    if (e.target.tagName) {
+      e.target.classList.toggle("checked");
+    }
+  });
 }
